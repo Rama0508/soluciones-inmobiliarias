@@ -1,0 +1,9 @@
+# Contactos personales — el bot NO responde a estos números
+# Formato: número completo con código de país, sin espacios ni guiones
+# Argentina móvil: 54 + 9 + código de área + número
+# Ejemplo: +54 9 388 863-3210 → 5493888633210
+#
+# Agregar un número aquí tiene efecto inmediato, sin reiniciar el bot.
+
+# --- Ponés los números acá abajo, uno por línea ---
+

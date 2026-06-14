@@ -1,0 +1,37 @@
+# Dependencias
+node_modules/
+
+# Build de Next.js
+.next/
+out/
+
+# Caché TypeScript incremental — rompe el build de Nixpacks si se sube
+*.tsbuildinfo
+
+# Runtime — datos de la aplicación (NO versionar)
+data/
+auth/
+
+# Variables de entorno secretas
+.env
+.env.local
+.env*.local
+
+# Flag de restart
+.restart
+
+# Prompt personalizado del negocio — incluido en git para deploy
+# prompts/negocio.md
+
+# Logs
+logs/
+*.log
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# IDEs
+.idea/
+*.swp
+*.swo
