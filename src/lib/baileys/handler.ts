@@ -51,14 +51,10 @@ export async function handleIncomingMessages(
       continue;
     }
 
-    // Aceptar @s.whatsapp.net Y @lid (WhatsApp despliega LID en 2025-2026)
-    // No aceptar @lid haría perder mensajes en silencio en versiones recientes
-    if (
-      !remoteJid.endsWith("@s.whatsapp.net") &&
-      !remoteJid.endsWith("@lid")
-    ) {
-      continue;
-    }
+    // @lid = contacto agendado en el teléfono → ignorar siempre
+    // @s.whatsapp.net = contacto nuevo/desconocido → procesar
+    if (remoteJid.endsWith("@lid")) continue;
+    if (!remoteJid.endsWith("@s.whatsapp.net")) continue;
 
     // Texto plano, imagen (con caption) o audio
     const imageMessage = msg.message?.imageMessage ?? null;
